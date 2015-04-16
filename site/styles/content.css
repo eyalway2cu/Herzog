@@ -1,0 +1,295 @@
+/**
+ * Main Style Sheet
+ * Herzog
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Eyal Gershon
+ */
+
+ body {
+	display: table;
+ }
+
+ aside {
+ 	display: table-cell;
+ 	position: relative;
+ 	vertical-align: top;
+ 	min-width: 35vw;
+ 	height: 100vh;
+ 	border-left: 10px white solid;
+ 	overflow: hidden;
+ }
+
+ section {
+	display: table-cell;
+	vertical-align: top;
+ 	background-image: url(../images/Desktop.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ }
+
+div.image {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100vh;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: 0.3s all;
+}
+
+div#gallery_container div.image.direct.transit {
+	transition: none;
+}
+
+div.image p {
+	width: 70%;
+	padding-right: 50px;
+	color: white;
+	font-size: 2em;
+	text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+section div#logo {
+	display: block;
+	position: relative;
+	background-image: url(../images/logo.svg);
+	background-repeat: no-repeat;
+	background-size: 220px 110px;
+	background-position: center top;
+	width: 250px;
+	height: 110px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	padding: 0px 10px 0px 10px;
+}
+
+section div#logo:after {
+	content: '';
+	position: absolute;
+	top: 110px;
+	margin-left: 50%;
+	left: -135px;
+	width: 0;
+	height: 0;
+	border-left: 135px solid transparent;
+	border-right: 135px solid transparent;
+	border-top: 56px solid #FFF;
+}
+
+section div#main {
+	display: block;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #004f57;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+section div#main article {
+
+}
+
+section div#main article h1 {
+	color: #a71e35;
+	font-size: 5em;
+	font-weight: 900;
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+section div#main article p:first-of-type {
+	margin: 0;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+section div#main article ul {
+	padding: 0;
+	margin: 60px auto 60px auto;
+	text-align: center;
+}
+
+section div#main article ul li {
+	list-style-type: none;
+	display: inline-flex;
+	vertical-align: top;
+	align-items: center;
+	justify-content: center;
+	width: 10%;
+	height: 40px;
+	padding: 10px 10px;
+	margin: 5px 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+section div#main article p:last-of-type {
+	margin: 0;
+	display: block;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+section div#main article p:last-of-type span {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	padding-top: 75px;
+	background-image: url(../images/icons.svg);
+	background-repeat: none;
+	background-size: 1000px 250px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(1) {
+	background-position: 100px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(2) {
+	background-position: 217px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(3) {
+	background-position: 327px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(4) {
+	background-position: 440px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(5) {
+	background-position: 550px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(6) {
+	background-position: 660px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(7) {
+	background-position: 770px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(8) {
+	background-position: 883px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(9) {
+	background-position: 995px 155px;
+}
+
+div#contact {
+	margin-top: 100px;
+	text-align: right;
+}
+
+div#contact span {
+	display: block;
+	color: #a71e35;
+	font-size: 1.5em;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+
+div#contact form {
+	padding-bottom: 5px;
+}
+
+div#contact form label input {
+	display: inline-block;
+	font-size: 1.5em;
+	width: 33%;
+	border: none;
+	margin-left: 10px;
+	padding: 10px 10px;
+}
+
+div#contact div.controls {
+	display: inline-block;
+	width: calc(33% - 60px);
+	position: relative;
+    z-index: 1;
+}
+
+div#contact div.controls button {
+	color: white;
+	background-color: #a71e35;
+	border: none;
+	font-size: 1.5em;
+	padding: 10px 10px;
+	width: 100%;
+	transition: all 0.3s;
+}
+
+div#contact div.controls button:hover {
+	cursor: pointer;
+	background-color: #941B30;
+}
+
+div#contact div.controls button:before {
+	content: "";
+	background-image: url(../images/tablet-image.png);
+	background-repeat: no-repeat;
+	width: 157px;
+	height: 127px;
+	position: absolute;
+	top: -110px;
+	left: 85px;
+	z-index: -1;
+
+}
+
+div#contact span:last-of-type {
+	font-size: 0.7em;
+	color: #666666;
+	font-weight: 400;
+}
+
+
+@media all and (max-width: 1400px) {
+	div#contact div.controls button:before {
+		background-size: 80%;
+		width: 157px;
+		height: 127px;
+		position: absolute;
+		top: -90px;
+		left: 18%;
+		z-index: -1;
+	}
+}
+
+@media all and (max-width: 1024px) and (min-width: 768px) {
+	section div#main article ul li {
+		font-size: 0.7em;
+		width: 8%;
+	}
+
+	div#contact div.controls button:before {
+		background-size: 60%;
+		width: 157px;
+		height: 127px;
+		position: absolute;
+		top: -65px;
+		left: 8%;
+	}
+
+	div#contact span {
+		font-size: 1.2em;
+	}
+
+	div.image {
+		height: 100%;
+		background-size: cover;
+	}
+
+	section div#main article ul li {
+		display: inline-block;
+	}
+}
+
+
+
+
+

@@ -49,6 +49,17 @@ Site.is_mobile = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
+
+	if ($('div.image').length > 0) {
+		clientGallery = new Caracal.Gallery.Slider();
+		clientGallery
+		.images.set_container('aside')
+		.images.add('aside div.image')
+		.controls.set_auto(8000)
+		clientGallery.images.set_center(false)
+		clientGallery.images.set_spacing(0)
+		clientGallery.images.set_visible_count(1)
+	};
 };
 
 

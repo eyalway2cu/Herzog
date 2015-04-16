@@ -5,11 +5,37 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:collection include="page_control,animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
-
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<aside>
+					<cms:module
+							name="gallery"
+							action="show_image_list"
+							random="0"
+							template="parts/image.xml"
+							/>
+			</aside>
+			<section>
+				<div id="logo"></div>
+				<div id="main">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="text"
+					/>
+					<div id="contact">
+						<span><cms:text constant="top_form_text"/></span>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+							/>
+						<span><cms:text constant="bottom_form_text"/></span>
+					</div>
+				</div>
+			</section>
 		</body>
 	</html>
 </document>

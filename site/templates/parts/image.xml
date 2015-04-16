@@ -1,0 +1,5 @@
+<document>
+	<div class="image direct" style="'background-image: url('.$params['image'].')'" cms:eval="style">
+		<cms:markdown param="description" multilanguage="yes"/>
+	</div>
+</document>
