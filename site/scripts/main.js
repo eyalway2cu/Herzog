@@ -60,6 +60,39 @@ Site.on_load = function() {
 		clientGallery.images.set_spacing(0)
 		clientGallery.images.set_visible_count(1)
 	};
+
+
+	if (Site.is_mobile()) clientGallery.images.set_center(true);
+
+	var formclick = $('div#mobile_contact a');
+	formclick.click(function(){
+	  		$('div#contact').css('visibility','visible');
+	  		$('div#contact').css('opacity','1');
+	  });
+
+	var formclose = $('div#contact div a');
+	formclose.click(function(){
+	  		$('div#contact').css('visibility','hidden');
+	  		$('div#contact').css('opacity','0');
+	  });
+
+	var formclose_thankyou = $('div#thank_you div a');
+		formclose_thankyou.click(function(){
+		  		$('div#thank_you').css('visibility','hidden');
+		  		$('div#thank_you').css('opacity','0');
+		  		$('div#contact').css('visibility','hidden');
+		  		$('div#contact').css('opacity','0');
+		  });
+
+	$('form').on('dialog-show', function() {
+			$('div.send').hide();
+			$('div#thank_you').css('opacity','1');
+			$('div#thank_you').css('visibility','visible');
+			return false;
+		});
+
+	Caracal.animation_pages = new PageControl('div#contact')
+	Caracal.animation_pages.showPage(0)
 };
 
 

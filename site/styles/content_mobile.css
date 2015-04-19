@@ -1,0 +1,344 @@
+/**
+ * Mobile Content Style Sheet
+ * Herzog
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors: Eyal Gershon
+ */
+
+ body {
+ 	position: relative;
+ }
+
+aside {
+	display: block;
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+}
+
+div.image {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 0.3s all;
+}
+
+div#gallery_container div.image.direct.transit {
+	transition: none;
+}
+
+div#logo {
+	display: block;
+	position: relative;
+	background-image: url(../images/logo.svg);
+	background-repeat: no-repeat;
+	background-size: 100px 50px;
+	background-position: center top;
+	width: 120px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	padding: 0px 10px 0px 10px;
+	z-index: 1;
+}
+
+div#logo:after {
+	content: '';
+	position: absolute;
+	top: 50px;
+	margin-left: 50%;
+	left: -70px;
+	width: 0;
+	height: 0;
+	border-left: 70px solid transparent;
+	border-right: 70px solid transparent;
+	border-top: 40px solid #FFF;
+}
+
+div.image p {
+	display: block;
+	text-align: right;
+	margin: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 7px;
+	color: #004f57;
+	background-color: rgba(255, 255, 255, 0.8);
+	font-size: 1.2em;
+}
+
+div.image p:first-of-type {
+	margin-top: 120px;
+}
+
+div.image p:last-of-type {
+	font-size: 1.6em;
+}
+
+section div#main {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	color: #004f57;
+	text-align: center;
+	background-image: url(../images/mobile-background-bottom.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+section article:first-of-type {
+	overflow: hidden;
+}
+
+section article:last-of-type {
+	overflow-x: scroll;
+}
+
+section div#main article h1 {
+	color: #a71e35;
+	font-size: 2em;
+	font-weight: 900;
+	margin: 0;
+	margin-bottom: 10px;
+	padding-top: 20px;
+}
+
+section div#main article p:first-of-type {
+	margin: 0;
+	font-size: 1.1em;
+	font-weight: 700;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+section div#main article:last-of-type h1 {
+	display: none;
+}
+
+section div#main article:last-of-type p {
+	margin: 0;
+	display: block;
+	text-align: center;
+	font-size: 0.8em;
+	width: 900px;
+	padding-bottom: 20px;
+}
+
+section div#main article p:last-of-type span {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	padding-top: 75px;
+	background-image: url(../images/icons.svg);
+	background-size: 1000px 250px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(1) {
+	background-position: 100px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(2) {
+	background-position: 217px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(3) {
+	background-position: 327px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(4) {
+	background-position: 440px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(5) {
+	background-position: 550px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(6) {
+	background-position: 660px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(7) {
+	background-position: 770px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(8) {
+	background-position: 883px 155px;
+}
+
+section div#main article p:last-of-type span:nth-of-type(9) {
+	background-position: 995px 155px;
+}
+
+div#contact {
+	position: fixed;
+	text-align: right;
+	top: -110px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	padding-top: 115px;
+	background-color: rgba(0, 0, 0, 1);
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	transition:all 0.6s;
+}
+
+
+div#contact div{
+	background-color: white;
+}
+
+div#contact div a {
+	text-decoration: none;
+	color: rgb(148, 148, 148);
+	font-size: 1.2em;
+	padding-right: 5px;
+}
+
+div#contact div img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#contact span {
+	display: block;
+	color: #a71e35;
+	font-size: 1.5em;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+
+div#contact span:last-of-type {
+	color: rgb(148, 148, 148);
+	font-size: 0.7em;
+	font-weight: 400;
+	position: absolute;
+	top: 560px;
+}
+
+div#contact form {
+	display: block;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+div#contact form label input {
+	display: inline-block;
+	font-size: 1.5em;
+	width: 80%;
+	border: none;
+	padding: 10px 10px;
+	margin-bottom: 15px;
+	background-color: rgb(224, 224, 224);
+}
+
+div#contact div.controls {
+	display: inline-block;
+	width: 80%;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 20px;
+	background-image: url(../images/form-shadow.png);
+	background-repeat: no-repeat;
+	background-size: 100% 7px;
+	background-position: center 55px;
+}
+
+div#contact div.controls button {
+	color: white;
+	background-color: #a71e35;
+	border: none;
+	font-size: 1.5em;
+	padding: 10px 10px;
+	width: 100%;
+	transition: all 0.3s;
+}
+
+div#mobile_contact {
+	display: block;
+	color: white;
+	background-color: #a71e35;
+	padding: 10px 10px;
+	margin-top: 20px;
+	font-size: 1.3em;
+}
+
+div#mobile_contact span {
+	display: block;
+	margin-bottom: 10px;
+}
+
+div#mobile_contact a {
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	padding: 5px 10px;
+}
+
+div#thank_you {
+	position: fixed;
+	text-align: right;
+	top: -110px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	padding-top: 115px;
+	background-color: rgba(0, 0, 0, 1);
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	transition:all 0.6s;
+}
+
+div#thank_you div {
+	background-color: white;
+}
+
+div#thank_you div a {
+	text-decoration: none;
+	color: rgb(148, 148, 148);
+	font-size: 1.2em;
+	padding-right: 5px;
+}
+
+div#thank_you div h2 {
+	display: block;
+	text-align: center;
+	font-size: 3em;
+}
+
+div#thank_you div span {
+	display: block;
+	text-align: center;
+	color: #a71e35;
+	font-size: 1.5em;
+	padding-bottom: 80px;
+	background-image: url(../images/form-shadow.png);
+	background-repeat: no-repeat;
+	background-size: 80% 7px;
+	background-position: center 75px;
+}
+
+div#thank_you div img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 40px;
+	width: 40%;
+}
+
+
+
+

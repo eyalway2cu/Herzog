@@ -1,5 +1,5 @@
 /**
- * Main Style Sheet
+ * Content Style Sheet
  * Herzog
  *
  * Copyright (c) 2015. by Way2CU, http://way2cu.com
@@ -32,7 +32,7 @@ div.image {
 	position: absolute;
 	top: 0px;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	transition: 0.3s all;
@@ -140,7 +140,6 @@ section div#main article p:last-of-type span {
 	width: 100px;
 	padding-top: 75px;
 	background-image: url(../images/icons.svg);
-	background-repeat: none;
 	background-size: 1000px 250px;
 }
 
@@ -257,6 +256,47 @@ div#contact span:last-of-type {
 		top: -90px;
 		left: 18%;
 		z-index: -1;
+	}
+
+	section div#main article p:last-of-type span {
+		width: 85px;
+		background-size: 950px 250px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(1) {
+		background-position: 95px 155px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(2) {
+		background-position: 201px 155px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(3) {
+		background-position: 307px 155px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(4) {
+		background-position: 413px 155px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(5) {
+		background-position: 518px 155px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(6) {
+		background-position: 623px 155px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(7) {
+		background-position: 730px 155px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(8) {
+		background-position: 834px 155px;
+	}
+
+	section div#main article p:last-of-type span:nth-of-type(9) {
+		background-position: 940px 155px;
 	}
 }
 

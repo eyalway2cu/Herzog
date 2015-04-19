@@ -9,33 +9,101 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<aside>
+			<!-- Desktop Version -->
+			<cms:desktop>
+				<aside>
 					<cms:module
 							name="gallery"
 							action="show_image_list"
+							container="desktop_container"
+							group="desktop"
 							random="0"
 							template="parts/image.xml"
 							/>
-			</aside>
-			<section>
-				<div id="logo"></div>
-				<div id="main">
-					<cms:module
-						name="articles"
-						action="show"
-						text_id="text"
-					/>
-					<div id="contact">
-						<span><cms:text constant="top_form_text"/></span>
+				</aside>
+				<section>
+					<div id="logo"></div>
+					<div id="main">
 						<cms:module
-							name="contact_form"
-							action="show"
-							text_id="contact_form"
+								name="articles"
+								action="show"
+								text_id="text"
 							/>
-						<span><cms:text constant="bottom_form_text"/></span>
+						<div id="contact">
+							<span><cms:text constant="top_form_text"/></span>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="contact_form"
+								/>
+							<span><cms:text constant="bottom_form_text"/></span>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</cms:desktop>
+			<!--Mobile Version -->
+			<cms:mobile>
+				<aside>
+					<div id="logo"></div>
+					<cms:module
+							name="gallery"
+							action="show_image_list"
+							container="mobile_container"
+							group="mobile"
+							random="0"
+							template="parts/image.xml"
+							/>
+				</aside>
+				<section>
+					<div id="main">
+					<cms:module
+							name="articles"
+							action="show"
+							text_id="mobile_text"
+						/>
+					<cms:module
+							name="articles"
+							action="show"
+							text_id="mobile_text_2"
+						/>
+						<div id="mobile_contact">
+							<span><cms:text constant="yeutz"/></span>
+							<a href="javascript:void(0)"><cms:text constant="press"/></a>
+						</div>
+						<div id="contact">
+							<div>
+								<a href="javascript:void(0)"><cms:text constant="close"/></a>
+								<span><cms:text constant="top_form_text"/></span>
+								<cms:module
+									name="contact_form"
+									action="show"
+									text_id="contact_form"
+									/>
+								<img
+									src="_BASEURL.'/site/images/tablet-image.png'"
+									alt="tablet"
+									cms:eval="src"
+								/>
+								<span>
+									<cms:text constant="bottom_form_text"/>
+								</span>
+							</div>
+						</div>
+						<div id="thank_you">
+							<div>
+								<a href="javascript:void(0)"><cms:text constant="close"/></a>
+								<h2><cms:text constant="thank_you_title"/></h2>
+								<span><cms:text constant="thank_you_text"/></span>
+								<img
+									src="_BASEURL.'/site/images/logo.svg'"
+									alt="logo"
+									cms:eval="src"
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
+			</cms:mobile>
 		</body>
 	</html>
 </document>
